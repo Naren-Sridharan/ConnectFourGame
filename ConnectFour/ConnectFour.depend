@@ -1,0 +1,92 @@
+# depslib dependency file v1.0
+1471788383 source:g:\projects\year  3\connectfour\main.cpp
+	"GameController.cpp"
+
+1471786812 g:\projects\year  3\connectfour\gamecontroller.h
+	"ContestantBot.h"
+
+1471791673 g:\projects\year  3\connectfour\bot.h
+	"BombBoard.cpp"
+
+1471791854 g:\projects\year  3\connectfour\bombboard.h
+	<iostream>
+	<string>
+	<fstream>
+	<cstdlib>
+	<ctime>
+	"Constants.h"
+
+1471791569 g:\projects\year  3\connectfour\gamecontroller.cpp
+	"GameController.h"
+
+1471791746 g:\projects\year  3\connectfour\contestantbot.h
+	"Bot.cpp"
+
+1471790018 g:\projects\year  3\connectfour\constants.h
+	<string>
+
+1471791569 source:g:\projects\year  3\connectfour\gamecontroller.cpp
+	"GameController.h"
+
+1471791704 g:\projects\year  3\connectfour\bombboard.cpp
+	"BombBoard.h"
+
+1471791770 g:\projects\year  3\connectfour\bot.cpp
+	"Bot.h"
+
+1471791770 source:g:\projects\year  3\connectfour\bot.cpp
+	"Bot.h"
+
+1471791704 source:g:\projects\year  3\connectfour\bombboard.cpp
+	"BombBoard.h"
+
+1471876320 source:c:\users\siva1\desktop\connectfour\bombboard.cpp
+	"BombBoard.h"
+
+1471884051 c:\users\siva1\desktop\connectfour\bombboard.h
+	"BombCell.h"
+
+1471884979 c:\users\siva1\desktop\connectfour\constants.h
+	<string>
+
+1471791772 source:c:\users\siva1\desktop\connectfour\bot.cpp
+	"Bot.h"
+
+1471884029 c:\users\siva1\desktop\connectfour\bot.h
+	"BombBoard.h"
+
+1471876320 c:\users\siva1\desktop\connectfour\bombboard.cpp
+	"BombBoard.h"
+
+1471883263 source:c:\users\siva1\desktop\connectfour\gamecontroller.cpp
+	"GameController.h"
+
+1471884029 c:\users\siva1\desktop\connectfour\gamecontroller.h
+	"ContestantBot.h"
+
+1471884029 c:\users\siva1\desktop\connectfour\contestantbot.h
+	"Bot.h"
+
+1471791772 c:\users\siva1\desktop\connectfour\bot.cpp
+	"Bot.h"
+
+1471788384 source:c:\users\siva1\desktop\connectfour\main.cpp
+	"GameController.cpp"
+
+1471883263 c:\users\siva1\desktop\connectfour\gamecontroller.cpp
+	"GameController.h"
+
+1471876320 c:\users\siva1\desktop\connectfour\bombcell.cpp
+	"BombCell.h"
+
+1471875887 c:\users\siva1\desktop\connectfour\bombcell.h
+	<iostream>
+	<string>
+	<fstream>
+	<cstdlib>
+	<ctime>
+	"Constants.h"
+
+1471876320 source:c:\users\siva1\desktop\connectfour\bombcell.cpp
+	"BombCell.h"
+

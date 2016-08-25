@@ -1,4 +1,4 @@
 #include "Bot.h"
-Bot::Bot(char color){
-    this->color = color;
+Bot::Bot(Constants::PlayerType P){
+    this->ptype = P;
 }

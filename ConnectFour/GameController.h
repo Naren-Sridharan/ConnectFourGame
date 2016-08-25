@@ -9,10 +9,10 @@ class GameController{
         Bot *userbot,*compbot;
 
         //Boardused to play the game
-        ConnectBombBoard *cb;
+        NuclearReactor *cb;
 
         //The player that has to make the next move
-        string currentPlayer;
+        Constants::PlayerType currentPlayer;
 
         //Gameplay between the bots
         void play();
@@ -20,8 +20,6 @@ class GameController{
         //initial toss to decide which bot plays first
         bool toss();
 
-        //check whether the game is over
-        bool isGameOver();;
         public:
 
         //constructor - creating game board and bots and then initialize the game

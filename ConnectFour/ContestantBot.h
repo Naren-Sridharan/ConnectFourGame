@@ -5,8 +5,8 @@
 //Bot to be designed bycontestant
 class UserBot : public Bot{
     public:
-    UserBot():Bot(Constants::RED){};
-    int caculateNextMove(ConnectBombBoard cb);
+    UserBot(Constants::PlayerType P):Bot(P){};
+    int caculateNextMove(NuclearReactor);
 };
 
 

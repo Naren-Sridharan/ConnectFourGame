@@ -1,21 +1,21 @@
 #ifndef BOT_H_INCLUDED
 #define BOT_H_INCLUDED
-#include "BombBoard.h"
+#include "NuclearReactor.h"
 
 //Genral bot
 class Bot{
     protected:
-        char color;
+        Constants::PlayerType ptype;
     public:
-        Bot(char);
-        virtual int caculateNextMove(ConnectBombBoard)=0;
+        Bot(Constants::PlayerType);
+        virtual int caculateNextMove(NuclearReactor)=0;
 
 };
 
 //Bot designed to play against contestant
 class CompBot : public Bot{
     public:
-    CompBot():Bot(Constants::BLUE){};
-    int caculateNextMove(ConnectBombBoard);
+    CompBot(Constants::PlayerType P):Bot(P){};
+    int caculateNextMove(NuclearReactor);
 };
 #endif // BOT_H_INCLUDED

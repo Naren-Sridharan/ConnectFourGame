@@ -1,7 +1,8 @@
-#ifndef CONSTANTS_H_INCLUDED
-#define CONSTANTS_H_INCLUDED
 #include <string>
 using namespace std;
+#ifndef CONSTANTS_H_INCLUDED
+#define CONSTANTS_H_INCLUDED
+
 class Constants{
     public:
     //name of computer bot
@@ -11,7 +12,7 @@ class Constants{
     static std::string const userbotname;
 
     //JSON file that is created
-    static std::string const filename = "moves.json";
+    static std::string const filename;
 
     //Number of Rows in board
     static const int ROWS = 6;
@@ -20,7 +21,16 @@ class Constants{
     static const int COLUMNS = 7;
 
     //colors used
-    static const char RED = 'r', BLUE = 'b', EMPTY = 'e';
+    enum NuclearCellStatus{
+        BOMB,
+        DEFUSER,
+        EMPTY
+    };
+
+    enum PlayerType{
+    USER,
+    COMP
+    };
 };
 
 std::string const Constants::filename = "moves.json";

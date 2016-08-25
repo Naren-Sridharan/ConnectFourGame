@@ -179,12 +179,12 @@ GameState NuclearReactor::isGameOver(){
     if((directions[0]+directions[4]) >= 3){
         int i = 0;
         for(int j = 0; i<4 && j < directions[0]; j++){
-            points[i][0] = row - 1 - i;
-            points[i++][1] = column - 1 - i;
+            points[i][0] = row - 1 - j;
+            points[i++][1] = column - 1 - j;
         }
         for(int j = 0; i<4 && j < directions[4]; j++){
-            points[i][0] = row + 1 + i;
-            points[i++][1] = column + 1 + i;
+            points[i][0] = row + 1 + j;
+            points[i++][1] = column + 1 + j;
         }
         fstream f(Constants::filename.c_str(),ios::in | ios::out | ios::app);
         f << "],\n\t\"Final Points\" : \" [\n\t\t";
@@ -197,11 +197,11 @@ GameState NuclearReactor::isGameOver(){
     else if((directions[1]+directions[5]) >= 3){
         int i = 0;
         for(int j = 0; i<4 && j < directions[1]; j++){
-            points[i][0] = row - 1 - i;
+            points[i][0] = row - 1 - j;
             points[i++][1] = column;
         }
-        for(int j = 0; i<4 && j < directions[3]; j++){
-            points[i][0] = row + 1 + i;
+        for(int j = 0; i<4 && j < directions[5]; j++){
+            points[i][0] = row + 1 + j;
             points[i++][1] = column;
         }
         fstream f(Constants::filename.c_str(),ios::in | ios::out | ios::app);
@@ -215,12 +215,12 @@ GameState NuclearReactor::isGameOver(){
     else if((directions[2]+directions[6]) >= 3){
         int i = 0;
         for(int j = 0; i<4 && j < directions[2]; j++){
-            points[i][0] = row - 1 - i;
-            points[i++][1] = column + 1 + i;
+            points[i][0] = row - 1 - j;
+            points[i++][1] = column + 1 + j;
         }
         for(int j = 0; i<4 && j < directions[6]; j++){
-            points[i][0] = row + 1 + i;
-            points[i++][1] = column - 1 - i;
+            points[i][0] = row + 1 + j;
+            points[i++][1] = column - 1 - j;
         }
         fstream f(Constants::filename.c_str(),ios::in | ios::out | ios::app);
         f << "],\n\t\"Final Points\" : \" [\n\t\t";
@@ -234,11 +234,11 @@ GameState NuclearReactor::isGameOver(){
         int i = 0;
         for(int j = 0; i<4 && j < directions[3]; j++){
             points[i][0] = row;
-            points[i++][1] = column + 1 + i;
+            points[i++][1] = column + 1 + j;
         }
         for(int j = 0; i<4 && j < directions[7]; j++){
             points[i][0] = row;
-            points[i++][1] = column - 1 - i;
+            points[i++][1] = column - 1 - j;
         }
         fstream f(Constants::filename.c_str(),ios::in | ios::out | ios::app);
         f << "],\n\t\"Final Points\" : \" [\n\t\t";

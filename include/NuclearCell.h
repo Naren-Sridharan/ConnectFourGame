@@ -13,11 +13,8 @@ using namespace std;
 class NuclearCell{
     // row and column of the cell
     int row,column;
-    friend class NuclearReactor;
-    friend class GameController;
     // color of cell indicating whether it is empty or a bomb is placed
     Constants::NuclearCellStatus status;
-
 
     public:
     //constructor
@@ -29,8 +26,14 @@ class NuclearCell{
     //Get the column number of the cell
     int getColumnIndex();
 
+    void setRowIndex(int row);
+
+    void setColumnIndex(int column);
+
     //Get the Color of the cell
     Constants::NuclearCellStatus getStatus();
+
+    void setStatus(Constants::NuclearCellStatus);
 
 };
 

@@ -28,8 +28,8 @@ class Constants{
     };
 
     enum PlayerType{
-    USER,
-    COMP
+        COMP,
+        USER
     };
 };
 

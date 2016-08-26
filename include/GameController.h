@@ -1,7 +1,8 @@
 #ifndef GAMECONTROLLER_H_INCLUDED
 #define GAMECONTROLLER_H_INCLUDED
 #include "ContestantBot.h"
-
+#include "NuclearReactor.h"
+#include "ComputerBot.h"
 //Controller for the game
 class GameController{
 

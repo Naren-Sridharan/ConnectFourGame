@@ -15,13 +15,13 @@ NuclearReactor::NuclearReactor(Constants::PlayerType player){
     //cout << "Game Board Created with first play by " << player << endl;
     for(int i = 0; i < Constants::ROWS; i++){
         for(int j = 0; j < Constants::COLUMNS; j++){
-            cells[i][j].row = i;
-            cells[i][j].column = j;
+            cells[i][j].setRowIndex(i);
+            cells[i][j].setColumnIndex(j);
         }
     }
-    lastmove.row = -1;
-    lastmove.column = -1;
-    lastmove.status = Constants::EMPTY;
+    lastmove.setRowIndex(-1);
+    lastmove.setColumnIndex(-1);
+    lastmove.setStatus(Constants::EMPTY);
     ofstream ofs;
     ofs.open("moves.json", std::ofstream::out | std::ofstream::trunc);
     ofs.close();
@@ -46,12 +46,12 @@ void NuclearReactor::dropBomb(int column,Constants::PlayerType P){
     if(isBombPlaceable(column)){
         //cout << "Bomb Placed" << endl;
         int row = Constants::ROWS-1;
-        while(cells[row][column].status != Constants::EMPTY) row--;
-        cells[row][column].status = (P)?Constants::BOMB : Constants::DEFUSER;
-        Constants::NuclearCellStatus l = lastmove.status;
-        lastmove.row = row;
-        lastmove.column = column;
-        lastmove.status = cells[row][column].status;
+        while(cells[row][column].getStatus() != Constants::EMPTY) row--;
+        cells[row][column].setStatus((P)?Constants::BOMB : Constants::DEFUSER);
+        Constants::NuclearCellStatus l = lastmove.getStatus();
+        lastmove.setRowIndex(row);
+        lastmove.setColumnIndex(column);
+        lastmove.setStatus(cells[row][column].getStatus());
         fstream f(Constants::filename.c_str(),ios::in | ios::out | ios::app);
         if(l != Constants::EMPTY)
             f << ",\n";
@@ -72,9 +72,9 @@ GameState NuclearReactor::isGameOver(){
     int k,directions[8] = {0};
     bool flags[8] = {false};
     NuclearCell bc = lastmove;
-    int row = bc.row;
-    int column = bc.column;
-    Constants::NuclearCellStatus status = bc.status;
+    int row = bc.getRowIndex();
+    int column = bc.getColumnIndex();
+    Constants::NuclearCellStatus status = bc.getStatus();
     for(k = 0; k < Constants::COLUMNS; k++)
         if(isBombPlaceable(k))
             break;

@@ -3,7 +3,7 @@
 
 void GameController::play(){
     //cout << "Start Play" << endl;
-    while(cb->getRecentOpponentMove().status == Constants::EMPTY || !cb->isGameOver()){
+    while(cb->getRecentOpponentMove().getStatus() == Constants::EMPTY || !cb->isGameOver()){
         //cout << "turn " << endl;
         if(currentPlayer == Constants::USER){
             cb->dropBomb(userbot->caculateNextMove(*cb),Constants::USER);

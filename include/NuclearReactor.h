@@ -10,24 +10,23 @@ enum GameState{
 class NuclearReactor{
         NuclearCell cells[Constants::ROWS][Constants::COLUMNS]; // 2D BOARD made of cells with "ROWS" rows and "COLUMNS" columns
         NuclearCell lastmove; //Cell on which the last bomb was dropped into
-        friend class GameController;
-        //Drops the bomb in the "column" if it is a valid move
-        void dropBomb(int column,Constants::PlayerType P);
-
-        //checks whether a bomb/defusal kit can be placed at the given column number
-        bool isBombPlaceable(int column_number);
 
     public:
 
         //Constructor with the starting player as parameter
         NuclearReactor(Constants::PlayerType player);
 
-	//CopyConstructor
+	   //CopyConstructor
         NuclearReactor(NuclearReactor const &NR);
 
-	//Get last ooponent move
+	   //Get last ooponent move
         NuclearCell getRecentOpponentMove();
 
+        //Drops the bomb in the "column" if it is a valid move
+        void dropBomb(int column,Constants::PlayerType P);
+    
+        //checks whether a bomb/defusal kit can be placed at the given column number
+        bool isBombPlaceable(int column_number);
         //Get the Color of the cell at (row,column)
         Constants::NuclearCellStatus getCellStatus(int row,int column);
 
@@ -36,4 +35,4 @@ class NuclearReactor{
 };
 
 
-#endif // BOMBBOARD_H_INCLUDED
+#endif // NUCLEARREACTOR_H_INCLUDED

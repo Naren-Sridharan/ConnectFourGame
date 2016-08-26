@@ -11,11 +11,4 @@ class Bot{
         virtual int caculateNextMove(NuclearReactor)=0;
 
 };
-
-//Bot designed to play against contestant
-class CompBot : public Bot{
-    public:
-    CompBot(Constants::PlayerType P):Bot(P){};
-    int caculateNextMove(NuclearReactor);
-};
-#endif // BOT_H_INCLUDED
+#endif 

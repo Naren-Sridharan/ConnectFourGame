@@ -6,11 +6,11 @@ void GameController::play(){
     while(cb->getRecentOpponentMove().getStatus() == Constants::EMPTY || !cb->isGameOver()){
         //cout << "turn " << endl;
         if(currentPlayer == Constants::USER){
-            cb->dropBomb(userbot->caculateNextMove(*cb),Constants::USER);
+            cb->dropBomb(userbot->calculateNextMove(*cb),Constants::USER);
             currentPlayer = Constants::Constants::COMP;
         }
         else{
-            cb->dropBomb(compbot->caculateNextMove(*cb),Constants::COMP);
+            cb->dropBomb(compbot->calculateNextMove(*cb),Constants::COMP);
             currentPlayer = Constants::USER;
         }
     }

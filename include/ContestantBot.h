@@ -1,14 +1,13 @@
-#ifndef CONTESTANTBOT_H_INCLUDED
-#define CONTESTANTBOT_H_INCLUDED
+#ifndef CONTESTANTBOT_H
+#define CONTESTANTBOT_H
 #include "Bot.h"
 
 //Bot to be designed bycontestant
 class UserBot : public Bot{
     public:
     UserBot(Constants::PlayerType P):Bot(P){};
-    int caculateNextMove(NuclearReactor);
+    int calculateNextMove(ConnectBombBoard *cb);
 };
 
+#endif
 
-
-#endif // CONTESTANTBOT_H_INCLUDED

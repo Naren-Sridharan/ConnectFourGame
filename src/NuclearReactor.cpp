@@ -11,7 +11,7 @@ bool NuclearReactor::isBombPlaceable(int column_number){
 }
 
 //CopyConstructor
-        NuclearReactor(NuclearReactor const &NR){
+        NuclearReactor::NuclearReactor(NuclearReactor const &NR){
             for(int i = 0; i < Constants::ROWS; i++)
                 for(int j = 0; j < Constants::Columns; j++)
                     this->Cells[i][j] = NR.cells[i][j];

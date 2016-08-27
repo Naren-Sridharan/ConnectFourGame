@@ -34,6 +34,6 @@ GameController::GameController(){
     else{
         currentPlayer = Constants::COMP;
     }
-    cb = new NuclearReactor(currentPlayer);
+    cb = new NuclearReactor();
     play();
 }

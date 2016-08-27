@@ -3,7 +3,7 @@
 #include "NuclearCell.h"
 //Board for the Game
 enum GameState{
-	NO_STATE
+	NO_STATE,
 	WIN,
 	LOSE,
 };

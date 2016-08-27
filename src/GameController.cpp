@@ -26,8 +26,10 @@ bool GameController::toss(){
 }
 
 
-GameController::GameController(){
+GameController::GameController(Bot * userbot,Bot * compbot){
     //cout << "Game Controller Created" << endl;
+    this->userbot = userbot;
+    this->compbot = compbot;
     if(toss()){
         currentPlayer = Constants::USER;
     }
@@ -35,5 +37,4 @@ GameController::GameController(){
         currentPlayer = Constants::COMP;
     }
     cb = new NuclearReactor(currentPlayer);
-    play();
 }

@@ -10,6 +10,13 @@ bool NuclearReactor::isBombPlaceable(int column_number){
     }
 }
 
+NuclearReactor::NuclearReactor(NuclearReactor const &NR){
+            for(int i = 0; i < Constants::ROWS; i++)
+                for(int j = 0; j < Constants::COLUMNS; j++)
+                    this->cells[i][j] = NR.cells[i][j];
+            this->lastmove = NR.lastmove;
+}
+
 //Constructor with the starting player as parameter
 NuclearReactor::NuclearReactor(Constants::PlayerType player){
     //cout << "Game Board Created with first play by " << player << endl;

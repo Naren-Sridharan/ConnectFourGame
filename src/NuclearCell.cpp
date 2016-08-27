@@ -26,3 +26,6 @@ Constants::NuclearCellStatus NuclearCell::getStatus(){
 void NuclearCell::setStatus(Constants::NuclearCellStatus status){
 	this->status = status;
 }
+
+NuclearCell::NuclearCell(){
+}

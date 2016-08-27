@@ -1,8 +1,7 @@
+#ifndef CONSTANTS_H_
+#define CONSTANTS_H_
 #include <string>
 using namespace std;
-#ifndef CONSTANTS_H_INCLUDED
-#define CONSTANTS_H_INCLUDED
-
 class Constants{
     public:
     //name of computer bot
@@ -32,9 +31,5 @@ class Constants{
     COMP
     };
 };
-
-std::string const Constants::filename = "moves.json";
-std::string const Constants::compbotname = "defuser";
-std::string const Constants::userbotname = "bomber";
 
 #endif // CONSTANTS_H;

@@ -30,8 +30,8 @@ class NuclearReactor{
         //Get the Color of the cell at (row,column)
         Constants::NuclearCellStatus getCellStatus(int row,int column);
 
-	//check whether game is ovver
-	GameState isGameOver();
+	    //check whether game is ovver
+	    GameState isGameOver();
 };
 
 

@@ -1,8 +1,9 @@
 #ifndef GAMECONTROLLER_H_INCLUDED
 #define GAMECONTROLLER_H_INCLUDED
-#include "ContestantBot.h"
 #include "NuclearReactor.h"
-#include "ComputerBot.h"
+#include "Bot.h"
+#include "Constants.h"
+
 //Controller for the game
 class GameController{
 
@@ -16,7 +17,6 @@ class GameController{
         Constants::PlayerType currentPlayer;
 
         //Gameplay between the bots
-        void play();
 
         //initial toss to decide which bot plays first
         bool toss();
@@ -24,7 +24,10 @@ class GameController{
         public:
 
         //constructor - creating game board and bots and then initialize the game
-        GameController();
+        GameController(Bot *userbot,Bot *compbot);
+
+        void play();
+
 };
 
 #endif // GAMECONTROLLER_H_INCLUDED

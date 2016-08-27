@@ -1,13 +1,10 @@
 
-#include "Bot.h"
+#include "ComputerBot.h"
 //Bot designed to play against contestant
-class CompBot : public Bot{
-    public:
-    CompBot(Constants::PlayerType P):Bot(P){}
-    int calculateNextMove(ConnectBombBoard *cb){
+
+int CompBot::calculateNextMove(NuclearReactor cb){
         //BombCell *lastmove = cb.getLastMove();
-        int x = rand()%COLUMNS;
-        while(!cb->isBombPlaceable(x)) x = rand()%COLUMNS;
+        int x = rand()%Constants::COLUMNS;
+        while(!cb.isBombPlaceable(x)) x = rand()%Constants::COLUMNS;
         return x;
-    }
-};
+}

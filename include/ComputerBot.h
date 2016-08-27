@@ -5,6 +5,6 @@
 class CompBot : public Bot{
     public:
     CompBot(Constants::PlayerType P):Bot(P){};
-    int caculateNextMove(NuclearReactor);
+    int calculateNextMove(NuclearReactor);
 };
 #endif // COMPUTERBOT_H_INCLUDED

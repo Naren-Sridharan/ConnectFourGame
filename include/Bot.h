@@ -8,7 +8,7 @@ class Bot{
         Constants::PlayerType ptype;
     public:
         Bot(Constants::PlayerType);
-        virtual int caculateNextMove(NuclearReactor)=0;
+        virtual int calculateNextMove(NuclearReactor)=0;
 
 };
-#endif 
+#endif

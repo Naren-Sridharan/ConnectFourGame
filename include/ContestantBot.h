@@ -6,7 +6,7 @@
 class UserBot : public Bot{
     public:
     UserBot(Constants::PlayerType P):Bot(P){};
-    int caculateNextMove(NuclearReactor);
+    int calculateNextMove(NuclearReactor);
 };
 
 

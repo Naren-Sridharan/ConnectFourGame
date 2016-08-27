@@ -7,7 +7,7 @@ void GameController::play(){
         //cout << "turn " << endl;
         if(currentPlayer == Constants::USER){
             cb->dropBomb(userbot->calculateNextMove(*cb),Constants::USER);
-            currentPlayer = Constants::Constants::COMP;
+            currentPlayer = Constants::COMP;
         }
         else{
             cb->dropBomb(compbot->calculateNextMove(*cb),Constants::COMP);
@@ -15,7 +15,7 @@ void GameController::play(){
         }
     }
     fstream f(Constants::filename.c_str(),ios::in | ios::out | ios::app);
-    f << "\n\t\"winner\" : \"" << ((cb->getRecentOpponentMove().getStatus() == Constants::BOMB) ? Constants::userbotname : Constants::Constants::compbotname) << "\"\n}";
+    f << "\n\t\"winner\" : \"" << ((cb->getRecentOpponentMove().getStatus() == Constants::BOMB) ? Constants::userbotname : Constants::compbotname) << "\"\n}";
     //cout << "End Play" << endl;
 }
 
@@ -34,6 +34,8 @@ GameController::GameController(){
     else{
         currentPlayer = Constants::COMP;
     }
+    userbot = new UserBot(Constants::USER);
+    compbot = new CompBot(Constants::COMP);
     cb = new NuclearReactor();
     play();
 }

@@ -60,7 +60,6 @@ void NuclearReactor::dropBomb(int column,Constants::PlayerType P){
         moves.push_back(move);
     }
     else{
-        fstream f(Constants::filename.c_str(),ios::in | ios::out | ios::app);
         writeToJson((P)?Constants::userbotname : Constants::compbotname);
         exit(0);
     }
@@ -79,10 +78,8 @@ GameState NuclearReactor::isGameOver(){
         if(isBombPlaceable(k))
             break;
     if(k == Constants::COLUMNS){
-        fstream f(Constants::filename.c_str(),ios::in | ios::out | ios::app);
-        f << "],\n\t\"winner\" : \"Draw\"\n}";
-        f.close();
-        //cout << "End Play" << endl;
+        cout << "\t\"winner\" : \"Draw\"" << endl;
+        cout << "}";
         exit(0);
     }
     if(row == -1 && column == -1)
@@ -246,8 +243,7 @@ void writeToJson(string player){
             cout << endl;
     }
     cout << "\t]," << endl;
-
-    f << "\t\"Final Points\" : [" << endl;
+    cout << "\t\"Final Points\" : [" << endl;
     for(unsigned int i = 0 ; i < FinalPoints.size(); i++){
         cout << "\t\t{" << endl;
         cout << "\t\t\t\"row\" : \"" << FinalPoints[i].row << "\"," << endl;
@@ -258,6 +254,7 @@ void writeToJson(string player){
         else
             cout << endl;
     }
-    cout << "\t]" << endl;
+    cout << "\t]," << endl;
+    cout << "\t\"winner\" : \"" << player << "\"" << endl;
     cout << "}";
 }

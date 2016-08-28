@@ -5,7 +5,8 @@
 //Bot to be designed bycontestant
 class UserBot : public Bot{
     public:
-    UserBot(Constants::PlayerType P):Bot(P){};
+    UserBot():Bot(Constants::USER){};
+    UserBot(UserBot const &U):Bot(Constants::USER){};
     int calculateNextMove(NuclearReactor);
 };
 

@@ -34,7 +34,6 @@ GameController::GameController(){
     else{
         currentPlayer = Constants::COMP;
     }
-
     userbot = new UserBot(Constants::USER);
     compbot = new CompBot(Constants::COMP);
     cb = new NuclearReactor();

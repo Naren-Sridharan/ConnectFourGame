@@ -30,9 +30,6 @@ NuclearReactor::NuclearReactor(Constants::PlayerType player){
     lastmove.setRowIndex(-1);
     lastmove.setColumnIndex(-1);
     lastmove.setStatus(Constants::EMPTY);
-    ofstream ofs;
-    ofs.open(Constants::filename.c_str(), std::ofstream::out | std::ofstream::trunc);
-    ofs.close();
 }
 
 //Get the position of the last bomb dropped into the board

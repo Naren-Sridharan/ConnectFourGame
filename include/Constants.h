@@ -25,7 +25,8 @@ class Constants{
 
     enum PlayerType{
     USER,
-    COMP
+    COMP,
+    NOPLAYER
     };
 };
 

@@ -4,12 +4,6 @@
 using namespace std;
 #include "NuclearCell.h"
 //Board for the Game
-enum GameState{
-	NO_STATE,
-	WIN,
-	LOSE,
-
-};
 struct Move{
     string player;
     int row,column;
@@ -42,7 +36,7 @@ class NuclearReactor{
         Constants::NuclearCellStatus getCellStatus(int row,int column);
 
 	    //check whether game is ovver
-	    GameState isGameOver();
+	    Constants::PlayerType isGameOver();
 };
 
 

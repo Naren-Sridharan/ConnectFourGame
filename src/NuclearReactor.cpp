@@ -66,7 +66,7 @@ void NuclearReactor::dropBomb(int column,Constants::PlayerType P){
 }
 
 //check whether the game is over
-GameState NuclearReactor::isGameOver(){
+Constants::PlayerType NuclearReactor::isGameOver(){
     //cout << "Checking if game is over" << endl;
     int k,directions[8] = {0};
     bool flags[8] = {false};
@@ -83,7 +83,7 @@ GameState NuclearReactor::isGameOver(){
         exit(0);
     }
     if(row == -1 && column == -1)
-        return NO_STATE;
+        return Constants::NOPLAYER;
     for(int i = 0; i < 3; i++){
         for(int j = 0; j < 8; j++){
             if(directions[j] == i && !flags[j]){
@@ -223,10 +223,10 @@ GameState NuclearReactor::isGameOver(){
         for(int j = 0; j < 4 ; j++){
             FinalPoints.push_back(points[j]);
         }
-        return WIN;
+        return ((this->getRecentOpponentMove().getStatus())?Constants::COMP:Constants::USER);
     }
 
-    return NO_STATE;
+    return Constants::NOPLAYER;
 }
 void writeToJson(string player){
     cout << "{" << endl;

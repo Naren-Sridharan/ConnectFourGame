@@ -74,14 +74,6 @@ Constants::PlayerType NuclearReactor::isGameOver(){
     int row = bc.getRowIndex();
     int column = bc.getColumnIndex();
     Constants::NuclearCellStatus status = bc.getStatus();
-    for(k = 0; k < Constants::COLUMNS; k++)
-        if(isBombPlaceable(k))
-            break;
-    if(k == Constants::COLUMNS){
-        cout << "\t\"winner\" : \"Draw\"" << endl;
-        cout << "}";
-        exit(0);
-    }
     if(row == -1 && column == -1)
         return Constants::NOPLAYER;
     for(int i = 0; i < 3; i++){
@@ -225,7 +217,14 @@ Constants::PlayerType NuclearReactor::isGameOver(){
         }
         return ((this->getRecentOpponentMove().getStatus())?Constants::COMP:Constants::USER);
     }
-
+    for(k = 0; k < Constants::COLUMNS; k++)
+        if(isBombPlaceable(k))
+            break;
+    if(k == Constants::COLUMNS){
+        cout << "\t\"winner\" : \"Draw\"" << endl;
+        cout << "}";
+        exit(0);
+    }
     return Constants::NOPLAYER;
 }
 void writeToJson(string player){

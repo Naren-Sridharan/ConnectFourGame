@@ -7,7 +7,7 @@ int main()
 {
     UserBot *userBot = new UserBot();
     CompBot * computerBot = new CompBot();
-    GameController *gc = new GameController(computerBot,userBot);
-    gc->play();	
+    GameController *gc = new GameController(userBot,computerBot);
+    gc->play();
     return 0;
 }

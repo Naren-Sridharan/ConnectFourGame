@@ -49,12 +49,12 @@ void NuclearReactor::dropBomb(int column,Constants::PlayerType P){
         //cout << "Bomb Placed" << endl;
         int row = Constants::ROWS-1;
         while(cells[row][column].getStatus() != Constants::EMPTY) row--;
-        cells[row][column].setStatus((P)?Constants::BOMB : Constants::DEFUSER);
+        cells[row][column].setStatus((P)?Constants::DEFUSER : Constants::BOMB);
         lastmove.setRowIndex(row);
         lastmove.setColumnIndex(column);
         lastmove.setStatus(cells[row][column].getStatus());
         Move move;
-        move.player = ((P)?Constants::userbotname : Constants::compbotname);
+        move.player = ((P)?Constants::compbotname : Constants::userbotname);
         move.row = row;
         move.column = column;
         moves.push_back(move);

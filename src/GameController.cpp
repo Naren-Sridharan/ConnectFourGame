@@ -7,7 +7,7 @@ void GameController::play(){
         //cout << "turn " << endl;
         if(currentPlayer == Constants::USER){
             cb->dropBomb(userbot->calculateNextMove(*cb),Constants::USER);
-            currentPlayer = Constants::Constants::COMP;
+            currentPlayer = Constants::COMP;
         }
         else{
             cb->dropBomb(compbot->calculateNextMove(*cb),Constants::COMP);

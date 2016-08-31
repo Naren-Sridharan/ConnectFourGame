@@ -20,7 +20,8 @@ class Constants{
     enum NuclearCellStatus{
         BOMB,
         DEFUSER,
-        EMPTY
+        EMPTY,
+        INVALID
     };
 
     enum PlayerType{

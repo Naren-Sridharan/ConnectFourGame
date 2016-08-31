@@ -39,7 +39,10 @@ NuclearCell NuclearReactor::getRecentOpponentMove(){
 
 //Get the status of the cell at (row,column)
 Constants::NuclearCellStatus NuclearReactor::getCellStatus(int row,int column){
-    return cells[row][column].getStatus();
+    if(row >= 0 && row < Constants::ROWS && column >= 0 && row < Constants::COLUMNS)
+        return cells[row][column].getStatus();
+    else
+        return Constants::INVALID;
 }
 
 //Drops the bomb in the "column" if it is a valid move
@@ -242,7 +245,7 @@ void writeToJson(string player){
             cout << endl;
     }
     cout << "\t]," << endl;
-    cout << "\t\"Final Points\" : [" << endl;
+    cout << "\t\"coordinates\" : [" << endl;
     for(unsigned int i = 0 ; i < FinalPoints.size(); i++){
         cout << "\t\t{" << endl;
         cout << "\t\t\t\"row\" : \"" << FinalPoints[i].row << "\"," << endl;

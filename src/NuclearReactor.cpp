@@ -39,7 +39,7 @@ NuclearCell NuclearReactor::getRecentOpponentMove(){
 
 //Get the status of the cell at (row,column)
 Constants::NuclearCellStatus NuclearReactor::getCellStatus(int row,int column){
-    if(row >= 0 && row < Constants::ROWS && column >= 0 && row < Constants::COLUMNS)
+    if(row >= 0 && row < Constants::ROWS && column >= 0 && column < Constants::COLUMNS)
         return cells[row][column].getStatus();
     else
         return Constants::INVALID;

@@ -19,7 +19,7 @@ class NuclearReactor{
     public:
 
         //Constructor with the starting player as parameter
-        NuclearReactor(Constants::PlayerType player);
+        NuclearReactor();
 
 	   //CopyConstructor
         NuclearReactor(NuclearReactor const &NR);

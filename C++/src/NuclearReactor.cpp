@@ -19,7 +19,7 @@ NuclearReactor::NuclearReactor(NuclearReactor const &NR){
 }
 
 //Constructor with the starting player as parameter
-NuclearReactor::NuclearReactor(Constants::PlayerType player){
+NuclearReactor::NuclearReactor(){
     //cout << "Game Board Created with first play by " << player << endl;
     for(int i = 0; i < Constants::ROWS; i++){
         for(int j = 0; j < Constants::COLUMNS; j++){

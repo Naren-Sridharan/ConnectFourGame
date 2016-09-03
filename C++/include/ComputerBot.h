@@ -7,7 +7,6 @@
 class CompBot : public Bot{
     public:
     CompBot():Bot(Constants::COMP){};
-    CompBot(CompBot const &U):Bot(Constants::COMP){};
     int calculateNextMove(NuclearReactor);
 };
 
